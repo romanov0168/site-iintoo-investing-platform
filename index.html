@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+<!--
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_black_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_blackitalic_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_bold_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_bolditalic_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_extrabold_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_extrabolditalic_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_extralight_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_extralightitalic_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_italic_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_light_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_lightitalic_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_medium_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_mediumitalic_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+-->
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+<!--
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_semibold_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_semibolditalic_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_thin_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="font/barlow-fontfacekit/web-fonts/barlow_thinitalic_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+-->
+</head>
+
+<body class="body">
+    <main class="main">
+        <section class="decoration">
+            <a class="link" href="#">
+                <img class="logo" src="img/logo.svg" alt="logo">
+            </a>
+        </section>
+        <section class="content">
+            <div class="option">
+                <h1 class="title title_level_1">Get iintoo it today</h1>
+                <p class="paragraph option__paragraph">There is no charge or obligation upon registration.</p>
+                <div class="buttons option__buttons">
+                    <button class="button button_register button_register_facebook buttons__button">Register with Facebook</button>
+                    <button class="button button_register button_register_linkedin buttons__button">Register with LinkedIn</button>
+                </div>
+            </div>
+            <div class="separator">OR</div>
+            <div class="option">
+                <form class="form" action="">
+                    <fieldset class="fieldset form__fieldset">
+                        <legend class="legend">Register with Email or phone</legend>
+                        <p class="paragraph option__paragraph fieldset__paragraph">
+                            <input class="field field_border-style_1" type="email" id="email">
+                            <label class="label label_field" for="email">Email</label>
+                        </p>
+                        <p class="paragraph option__paragraph fieldset__paragraph">
+                            <input class="field field_border-style_2" type="tel" id="tel">
+                            <label class="label label_field" for="tel">Phone</label>
+                        </p>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <legend class="legend">Select the type of investor you are below</legend>
+                        <h2 class="title title_level_2">What type of investor are you?</h2>
+                        <p class="paragraph paragraph_small option__paragraph">Select the type of investor you are below.</p>
+                        <p class="paragraph paragraph_radio">
+                            <span class="variant">
+                                <input class="radio radio__border-style_2" type="radio" id="individual" name="type" value="individual" checked>
+                                <label class="label label_radio" for="individual">Individual</label>
+                                <span class="icon">ⓘ</span>
+                            </span>
+                            <span class="variant">
+                                <input class="radio radio__border-style_2" type="radio" id="business" name="type" value="business">
+                                <label class="label label_radio" for="business">Business</label>
+                                <span class="icon">ⓘ</span>
+                            </span>
+                            <span class="variant">
+                                <input class="radio radio__border-style_2" type="radio" id="ira" name="type" value="ira">
+                                <label class="label label_radio" for="ira">IRA</label>
+                                <span class="icon">ⓘ</span>
+                            </span>
+                            <span class="variant">
+                                <input class="radio radio__border-style_2" type="radio" id="trust" name="type" value="trust">
+                                <label class="label label_radio" for="trust">Trust</label>
+                                <span class="icon icon_last">ⓘ</span>
+                            </span>
+                        </p>
+                        <p class="paragraph paragraph_hint">I am a natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common.</p>
+                        <p class="paragraph paragraph_small paragraph_checkbox">
+                            <label class="check">
+                                <input class="check__input" type="checkbox">
+                                <span class="check__box"></span>
+                                I argee to the terms and receiving notifications from iintoo <a class="link" href="#">View full terms</a>
+                            </label>
+                        </p>
+                        <p class="paragraph">
+                            <button class="button button_submit">Create Account</button>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+</body></html>
