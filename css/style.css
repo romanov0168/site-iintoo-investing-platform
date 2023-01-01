@@ -157,11 +157,11 @@ select {
     box-shadow: 0 0 0 1px #3698FB;
 }
 
-button:hover {
+.button:hover {
     color: #96A5B1;
 }
 
-button:active {
+.button:active {
     background-color: #FFFFFF;
     color: #96A5B1;
     outline: 1px solid #EEEEEE;
@@ -180,12 +180,12 @@ button:active {
 }
 
 .button_register_facebook {
-    background-image: url(/img/facebook.svg);
+    background-image: url(../img/facebook.svg);
     background-color: #255A9B;
 }
 
 .button_register_linkedin {
-    background-image: url(/img/linkedin.svg);
+    background-image: url(../img/linkedin.svg);
     background-color: #0076B6;
 }
 
