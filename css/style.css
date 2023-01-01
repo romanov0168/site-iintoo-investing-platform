@@ -227,7 +227,7 @@ button:active {
     /*    padding-bottom: 44px;*/
     padding-bottom: 2.8em;
     padding-left: 52px;
-    background-image: url(/img/bg.jpeg);
+    background-image: url(../img/bg.jpeg);
     background-size: cover;
 }
 
@@ -563,9 +563,6 @@ button:active {
     .decoration {
         padding-top: 2.8em;
         padding-bottom: 2.8em;
-        padding-left: 52px;
-        background-image: url(/img/bg.jpeg);
-        background-size: cover;
     }
 
     .logo {
