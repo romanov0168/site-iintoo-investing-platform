@@ -151,12 +151,12 @@ select {
 }
 
 .button_register_facebook {
-    background-image: url("/img/facebook.svg");
+    background-image: url("../img/facebook.svg");
     background-color: #255A9B;
 }
 
 .button_register_linkedin {
-    background-image: url("/img/linkedin.svg");
+    background-image: url("../img/linkedin.svg");
     background-color: #0076B6;
 }
 
@@ -194,7 +194,7 @@ select {
     padding-right: 52px;
     padding-bottom: 44px;
     padding-left: 52px;
-    background-image: url("/img/bg.jpeg");
+    background-image: url("../img/bg.jpeg");
     background-size: cover;
 }
 
