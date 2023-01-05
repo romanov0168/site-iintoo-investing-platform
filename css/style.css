@@ -1,20 +1,15 @@
-/*Какие-то отступы нужно переделать с px на em?*/
-
 /*Сброс стилей. Начало*/
-/* Указываем box sizing */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Убираем внутренние отступы */
 ul[class],
 ol[class] {
     padding: 0;
 }
 
-/* Убираем внешние отступы */
 body,
 h1,
 h2,
@@ -32,38 +27,31 @@ dd {
     margin: 0;
 }
 
-/* Выставляем основные настройки по-умолчанию для body */
 body {
     min-height: 100vh;
-    scroll-behavior: smooth;
-    text-rendering: optimizeSpeed;
-    /*    line-height: 1.5;*/
     line-height: 1.3;
+    text-rendering: optimizeSpeed;
+    scroll-behavior: smooth;
 }
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
     list-style: none;
 }
 
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
     text-decoration-skip-ink: auto;
 }
 
-/* Упрощаем работу с изображениями */
 img {
-    max-width: 100%;
     display: block;
+    max-width: 100%;
 }
 
-/* Указываем понятную периодичность в потоке данных у article*/
 article > * + * {
     margin-top: 1em;
 }
 
-/* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,
@@ -71,34 +59,18 @@ select {
     font: inherit;
 }
 
-/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
     * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        animation-duration: 0.01ms !important;
     }
 }
 
 /*Сброс стилей. Конец*/
 
 /*Редактирование стилей. Начало*/
-/*Универсальные классы. Начало*/
-/*
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-*/
-/*Универсальные классы. Конец*/
-
 /*Частоиспользуемые блоки. Начало*/
 .link {
     color: #3698FB;
@@ -124,14 +96,15 @@ select {
 .title {
     color: #2A4A5C;
     font-weight: normal;
-    margin-bottom: 0.4em;
 }
 
-.title_level_1 {
+.title_huge {
+    margin-bottom: 12px;
     font-size: 1.8em;
 }
 
-.title_level_2 {
+.title_big {
+    margin-bottom: 8px;
     font-size: 1.3em;
 }
 
@@ -145,12 +118,12 @@ select {
 }
 
 .button {
-    border: none;
-    color: white;
-    transition: 0.2s all linear;
     width: 246px;
     height: 42px;
+    border: none;
+    color: white;
     cursor: pointer;
+    transition: 0.2s all linear;
 }
 
 .button:focus {
@@ -168,32 +141,30 @@ select {
 }
 
 .button_register {
-    /*    background-size: 20px;*/
-    background-size: 1.4em;
+    padding-right: 44px;
+    padding-left: 44px;
+    background-size: 20px;
     background-color: #255A9B;
     font-size: 0.9em;
-    background-position: 16px center;
-    /*    background-position: 1.1em center;*/
     background-repeat: no-repeat;
-    padding-left: 44px;
-    padding-right: 44px;
+    background-position: 16px center;
 }
 
 .button_register_facebook {
-    background-image: url(/img/facebook.svg);
+    background-image: url("/img/facebook.svg");
     background-color: #255A9B;
 }
 
 .button_register_linkedin {
-    background-image: url(/img/linkedin.svg);
+    background-image: url("/img/linkedin.svg");
     background-color: #0076B6;
 }
 
 .button_submit {
-    background-color: #3698FB;
     border-radius: 3px;
-    font-weight: bold;
-    font-size: 0.7em;
+    background-color: #3698FB;
+    font-size: 0.8em;
+    font-family: 'barlowsemibold', Arial, sans-serif;
 }
 
 .button_submit:hover {
@@ -206,28 +177,24 @@ select {
 .body {
     display: flex;
     background-color: #EFF6FF;
+    font-family: 'barlowregular', Arial, sans-serif;
     align-items: center;
     justify-content: center;
 }
 
 .main {
     display: flex;
-    background-color: #FFFFFF;
-    font-family: 'barlowregular',
-        Arial,
-        sans-serif;
     width: 1440px;
+    background-color: #FFFFFF;
 }
 
 .decoration {
     width: 100%;
-    /*    padding-top: 44px;*/
-    padding-top: 2.8em;
+    padding-top: 44px;
     padding-right: 52px;
-    /*    padding-bottom: 44px;*/
-    padding-bottom: 2.8em;
+    padding-bottom: 44px;
     padding-left: 52px;
-    background-image: url(/img/bg.jpeg);
+    background-image: url("/img/bg.jpeg");
     background-size: cover;
 }
 
@@ -237,32 +204,29 @@ select {
 
 .content {
     min-width: 680px;
-    /*    padding-top: 116px;*/
-    padding-top: 7.3em;
+    padding-top: 116px;
     padding-right: 80px;
-    /*    padding-bottom: 104px;*/
-    padding-bottom: 7.5em;
+    padding-bottom: 104px;
     padding-left: 74px;
 }
 
 .option {}
 
 .option__paragraph {
-    margin-bottom: 3em;
+    margin-bottom: 58px;
 }
 
-.buttons {
+.sign-up {
     display: flex;
     justify-content: space-between;
 }
 
-.buttons__button {
-    /*    margin-bottom: 50px;*/
-    margin-bottom: 3.1em;
+.sign-up__button {
     margin-right: 20px;
+    margin-bottom: 50px;
 }
 
-.buttons__button:last-child {
+.sign-up__button:last-child {
     margin-right: 0;
 }
 
@@ -273,23 +237,25 @@ select {
     background-image: linear-gradient(#EEEEEE, #EEEEEE);
     background-size: 110px 1px;
     content: " ";
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .separator {
-    /*    margin-bottom: 42px;*/
-    margin-bottom: 3.3em;
     color: #AFAFAF;
     font-size: 0.8em;
     text-align: center;
 }
 
+.content__separator {
+    margin-bottom: 42px;
+}
+
 .form {}
 
 .fieldset {
-    padding: 0;
     margin: 0;
+    padding: 0;
     border: none;
 }
 
@@ -304,20 +270,25 @@ select {
 
 .fieldset__paragraph {
     display: flex;
+    margin-right: 20px;
     color: #96A5B1;
+}
+
+.fieldset__paragraph:last-child {
+    margin-right: 0;
 }
 
 .field {
     width: 246px;
     height: 58px;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-bottom: 14px;
+    padding-left: 10px;
     border: 1px solid #EEEEEE;
     border-left: 1px solid #3698FB;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 30px;
-    padding-bottom: 14px;
-    font-size: 0.8em;
     color: #2A4A5C;
+    font-size: 0.8em;
     transition: 0.2s all linear;
 }
 
@@ -334,16 +305,8 @@ select {
     color: #7B8A92;
 }
 
-.field_border-style_1 {
-    border-top-right-radius: 2px;
-}
-
-.field_border-style_2 {
-    border-top-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-}
-
 .label {
+    position: relative;
     transition: 0.2s all linear;
 }
 
@@ -356,10 +319,9 @@ select {
 
 .paragraph_radio {
     display: flex;
-    flex-wrap: wrap;
-    /*    margin-bottom: 140px;*/
-    margin-bottom: 7.3em;
+    margin-bottom: 140px;
     line-height: 32px;
+    flex-wrap: wrap;
 }
 
 .variant {
@@ -367,39 +329,39 @@ select {
     flex-wrap: nowrap;
 }
 
-.label_radio {
-    font-size: 0.8em;
-    color: #2A4A5C;
+.paragraph__variant {
+    margin-right: 36px;
 }
 
-.icon {
-    color: #AFAFAF;
-    font-size: 0.5em;
-    /*    margin-right: 40px;*/
-    margin-right: 4.2em;
-    /*    margin-left: 8px;*/
-    margin-left: 0.8em;
-    margin-top: 2px;
-    cursor: pointer;
-}
-
-.icon_last {
+.paragraph__variant:last-child {
     margin-right: 0;
 }
 
+.label_radio {
+    color: #2A4A5C;
+    font-size: 0.8em;
+}
+
+.icon {
+    margin-top: 2px;
+    margin-left: 8px;
+    color: #AFAFAF;
+    font-size: 0.5em;
+    cursor: pointer;
+}
+
 .radio {
-    appearance: none;
-    border-radius: 50%;
+    position: relative;
     width: 17px;
     height: 17px;
-    border: 2px solid #EEEEEE;
-    transition: 0.2s all linear;
+    margin-top: 7px;
+    margin-right: 12px;
     margin-left: 0;
-    /*    margin-right: 12px;*/
-    margin-right: 0.6em;
-    position: relative;
-    top: 4px;
+    border: 2px solid #EEEEEE;
+    border-radius: 50%;
     cursor: pointer;
+    transition: 0.2s all linear;
+    appearance: none;
 }
 
 .radio:checked {
@@ -412,88 +374,83 @@ select {
 
 .radio:hover {
     border-color: #AFAFAF;
+    opacity: 0.8;
 }
 
 .paragraph_hint {
+    position: absolute;
     width: 256px;
-    font-size: 0.8em;
-    padding-top: 10px;
-    padding-right: 12px;
-    padding-bottom: 14px;
-    padding-left: 12px;
-    box-shadow: 0px 5px 20px 0px #EEEEEE;
+    margin-top: -122px;
+    margin-left: 4px;
+    padding: 12px;
     border-radius: 3px;
     color: #AFAFAF;
-    position: absolute;
-    margin-left: 4px;
-    /*    margin-top: -122px;*/
-    margin-top: -10.2em;
+    font-size: 0.8em;
+    box-shadow: 0 5px 20px 0 #EEEEEE;
 }
 
 .paragraph_checkbox {
+    margin-bottom: 60px;
     color: #AFAFAF;
-    /*    margin-bottom: 60px;*/
-    margin-bottom: 5em;
 }
 
 /* Check */
 
 .check {
-    padding-left: 1.5em;
+    padding-left: 20px;
 }
 
 .check__input {
     position: absolute;
     width: 1px;
     height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
     overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
 }
 
 .check__box {
     position: absolute;
-    margin-top: 0.2em;
-    margin-left: -1.3em;
-    width: 0.9em;
-    height: 0.9em;
+    width: 12px;
+    height: 12px;
     overflow: hidden;
+    margin-top: 3px;
+    margin-left: -17px;
     background-color: white;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    box-shadow: 0 0 0 0.1em #EEEEEE;
-    transition: 0.2s all linear;
     cursor: pointer;
+    transition: 0.2s all linear;
+    box-shadow: 0 0 0 1px #EEEEEE;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
 
 .check__box:hover {
-    box-shadow: 0 0 0 0.1em #AFAFAF;
-    opacity: 0.8;
+    box-shadow: 0 0 0 1px #AFAFAF;
 }
 
 /* Checked */
 
 .check__input:checked + .check__box {
-    background-color: #3698FB;
-    box-shadow: 0 0 0 0.1em #3698FB;
     background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpolyline fill='none' stroke='%23fff' stroke-width='3' points='1.079 4.999 5 9 10.837 2'/%3E%3C/svg%3E");
     background-size: 70%;
+    background-color: #3698FB;
+    box-shadow: 0 0 0 1px #3698FB;
 }
 
 /* Focused */
 
 .check__input:focus + .check__box {
     box-shadow:
-        0 0 0 0.1em #3698FB,
-        0 0 0 0.2em #3698FB;
+        0 0 0 1px #3698FB,
+        0 0 0 2px #3698FB;
 }
 
 /* Disabled */
 
 .check__input:disabled + .check__box {
-    box-shadow: 0 0 0 0.1em #9B9B9B;
+    box-shadow: 0 0 0 1px #9B9B9B;
 }
 
 .check__input:checked:disabled + .check__box {
@@ -521,14 +478,15 @@ select {
 
 @media screen and (max-width: 768px) {
     .button {
-        width: 183px;
+        max-width: 246px;
+        width: 100%;
         height: 40px;
     }
 
     .button_register {
-        background-position: 8px center;
-        padding-left: 35px;
         padding-right: 8px;
+        padding-left: 35px;
+        background-position: 8px center;
     }
 
     .body {
@@ -542,13 +500,18 @@ select {
 
     .content {
         min-width: inherit;
-        width: 426px;
         padding-right: 20px;
         padding-left: 20px;
     }
 
+    .fieldset__paragraph {
+        max-width: 246px;
+        width: 100%;
+    }
+
     .field {
-        width: 183px;
+        max-width: 246px;
+        width: 100%;
         height: 54px;
     }
 }
@@ -560,60 +523,66 @@ select {
         font-size: 14px;
     }
 
-    .decoration {
-        padding-top: 2.8em;
-        padding-bottom: 2.8em;
-    }
-
-    .logo {
-        width: 140px;
-    }
-
     .content {
-        padding-top: 3.7em;
-        padding-bottom: 3.7em;
-    }
-
-    .content {
-        min-width: 320px;
-        width: auto;
+        padding-top: 58px;
+        padding-bottom: 52px;
     }
 
     .option__paragraph {
-        margin-bottom: 1.5em;
+        margin-bottom: 30px;
     }
 
-    .buttons {
+    .sign-up {
         flex-wrap: wrap;
     }
 
-    .buttons__button {
-        margin-bottom: 1.5em;
+    .sign-up__button {
+        margin-bottom: 30px;
     }
 
-    .separator {
-        margin-bottom: 1.5em;
+    .content__separator {
+        margin-bottom: 30px;
     }
 
     .form__fieldset {
         flex-flow: column;
     }
 
+    .fieldset__paragraph {
+        max-width: inherit;
+        width: 100%;
+        margin-right: inherit;
+    }
+
     .field {
+        max-width: inherit;
         width: 100%;
     }
 
     .paragraph_radio {
-        flex-wrap: wrap;
-        margin-bottom: 5.8em;
+        max-height: 100px;
+        margin-bottom: 112px;
+        flex-direction: column;
+    }
+
+    .variant:nth-child(2) {
+        order: 3;
+    }
+
+    .variant:nth-child(3) {
+        order: 2;
+    }
+
+    .variant:nth-child(4) {
+        order: 4;
     }
 
     .paragraph_hint {
-        margin-top: -8.7em;
+        margin-top: -94px;
     }
 
     .paragraph_checkbox {
-        margin-bottom: 3.5em;
+        margin-bottom: 32px;
     }
 }
 
